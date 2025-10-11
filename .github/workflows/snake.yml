@@ -17,7 +17,8 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
 
-      - name: Generate Snake Game
-        uses: Platane/snk@v3.3.0
+      - name: Generate GitHub Contribution Snake
+        uses: Platane/snk@v3
         with:
-          github_user_name: ${{ adharbattulwar }}
+    # Use the repository owner dynamically
+          github_user_name: ${{ github.repository_owner }}
